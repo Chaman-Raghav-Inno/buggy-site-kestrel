@@ -1,0 +1,12 @@
+<h1>People</h1>
+<form id="pp-filters" class="filters card" novalidate role="search">
+  <div class="field grow"><label for="pp-q">Search by name</label><input id="pp-q" type="search" placeholder="e.g. Maya or Okafor"></div>
+  <div class="field"><label for="pp-dept">Department</label>
+    <select id="pp-dept"><option value="">All departments</option><option>Design</option><option>Engineering</option><option>Finance</option>
+      <option>Legal</option><option>Marketing</option><option>Operations</option><option>People</option><option>Sales</option><option>Support</option></select></div>
+  <div class="field"><label for="pp-sort">Sort by</label>
+    <select id="pp-sort"><option value="name">Name</option><option value="start">Start date (earliest first)</option></select></div>
+</form>
+<p id="pp-count" class="muted" role="status" aria-live="polite"></p>
+<div id="pp-list" class="grid"></div>
+<nav class="pager" aria-label="Pages"><button type="button" id="pp-prev" class="btn btn-ghost btn-small">Previous</button><span id="pp-page"></span><button type="button" id="pp-next" class="btn btn-ghost btn-small">Next</button></nav>

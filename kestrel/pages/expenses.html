@@ -1,0 +1,39 @@
+<h1>Expenses</h1>
+<p id="loading" class="muted">Loading…</p>
+<div id="expenses" hidden>
+  <div class="tiles">
+    <div class="tile"><p class="tile-label">Awaiting approval</p><p class="tile-value" id="ex-pending">–</p></div>
+    <div class="tile"><p class="tile-label">Approved, paid with your next salary</p><p class="tile-value" id="ex-approved">–</p></div>
+    <div class="tile"><p class="tile-label">Mileage claimed this year</p><p class="tile-value" id="ex-mileage">–</p></div>
+  </div>
+  <div class="grid-2">
+    <form id="ex-form" class="card" novalidate>
+      <h2>New claim</h2>
+      <div class="field-row">
+        <div class="field"><label for="ex-date">Date of the expense</label><input id="ex-date" type="date"></div>
+        <div class="field"><label for="ex-category">Category</label>
+          <select id="ex-category"><option>Travel</option><option>Meals</option><option>Hotel</option><option>Mileage</option><option>Other</option></select></div>
+      </div>
+      <div class="field"><label for="ex-description">Description</label><input id="ex-description" maxlength="140" placeholder="e.g. Train to the client"></div>
+      <div class="field-row" id="ex-money">
+        <div class="field"><label for="ex-currency">Currency</label>
+          <select id="ex-currency"><option>EUR</option><option>USD</option><option>GBP</option><option>JPY</option></select></div>
+        <div class="field"><label for="ex-amount">Amount</label><input id="ex-amount" inputmode="decimal" autocomplete="off" placeholder="0.00"></div>
+      </div>
+      <div class="field" id="ex-distance" hidden><label for="ex-km">Distance (km)</label><input id="ex-km" inputmode="decimal" autocomplete="off"></div>
+      <div class="field" id="ex-receipt-field"><label for="ex-receipt">Receipt (PDF or image)</label><input id="ex-receipt" type="file" accept=".pdf,.png,.jpg,.jpeg"></div>
+      <p id="ex-preview" class="hint" aria-live="polite"></p>
+      <p id="ex-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Submit claim</button>
+    </form>
+    <section class="card">
+      <h2>Your claims</h2>
+      <div class="table-wrap">
+        <table class="table ex-table" aria-label="Expense claims">
+          <thead><tr><th>Date</th><th>Claim</th><th class="num">Amount</th><th class="num">Reimbursed</th><th>Status</th></tr></thead>
+          <tbody id="ex-rows"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</div>
