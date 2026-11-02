@@ -1,0 +1,26 @@
+<div class="section-head">
+  <h1 id="ts-title">Timesheet</h1>
+  <nav class="actions week-nav" aria-label="Weeks"><a id="ts-prev" class="btn btn-ghost btn-small">← Previous week</a><a id="ts-this" class="btn btn-ghost btn-small">This week</a><a id="ts-next" class="btn btn-ghost btn-small">Next week →</a></nav>
+</div>
+<p id="loading" class="muted">Loading…</p>
+<form id="ts-form" class="card" novalidate hidden>
+  <p><span id="ts-status"></span> <span class="muted small" id="ts-hint"></span></p>
+  <p id="ts-comment" class="notice" hidden></p>
+  <div class="table-wrap">
+    <table class="table ts-table" aria-label="Hours by project and day">
+      <thead><tr id="ts-head"></tr></thead>
+      <tbody id="ts-rows"></tbody>
+      <tfoot><tr id="ts-foot"></tr></tfoot>
+    </table>
+  </div>
+  <dl class="facts ts-facts">
+    <div><dt>Week total</dt><dd id="ts-total">0 h</dd></div>
+    <div><dt>Overtime (saved)</dt><dd id="ts-overtime">0 h</dd></div>
+  </dl>
+  <p id="ts-msg" class="msg" role="status"></p>
+  <div class="actions">
+    <button type="submit" id="ts-save" class="btn btn-ghost">Save</button>
+    <button type="button" id="ts-submit" class="btn">Submit week</button>
+    <button type="button" id="ts-copy" class="btn btn-ghost">Copy last week</button>
+  </div>
+</form>

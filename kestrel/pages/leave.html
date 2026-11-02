@@ -1,0 +1,42 @@
+<h1>Leave</h1>
+<p id="loading" class="muted">Loading…</p>
+<div id="leave" class="grid-2" hidden>
+  <div class="stack">
+    <section class="card">
+      <h2>Your balance</h2>
+      <dl class="facts" id="lv-balance"></dl>
+    </section>
+    <form id="lv-form" class="card" novalidate>
+      <h2>Request time off</h2>
+      <div class="field-row">
+        <div class="field"><label for="lv-start">First day</label><input id="lv-start" type="date"></div>
+        <div class="field"><label for="lv-end">Last day</label><input id="lv-end" type="date"></div>
+      </div>
+      <label class="check"><input type="checkbox" id="lv-half"> Half day (first day only)</label>
+      <div class="field"><label for="lv-note">Note for your manager (optional)</label><input id="lv-note" maxlength="300"></div>
+      <p id="lv-preview" class="hint" aria-live="polite"></p>
+      <p id="lv-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Send request</button>
+    </form>
+  </div>
+  <div class="stack">
+    <section class="card">
+      <h2>Your requests</h2>
+      <div class="table-wrap">
+        <table class="table" aria-label="Leave requests">
+          <thead><tr><th>Dates</th><th class="num">Days</th><th>Status</th><th></th></tr></thead>
+          <tbody id="lv-rows"></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="card"><h2>Public holidays</h2><ul id="lv-holidays" class="list"></ul></section>
+  </div>
+</div>
+<dialog id="lv-cancel" aria-labelledby="lv-cancel-title">
+  <h2 id="lv-cancel-title">Cancel this leave?</h2>
+  <p id="lv-cancel-text"></p>
+  <div class="dialog-actions">
+    <button type="button" class="btn btn-ghost" data-value="keep">Keep it</button>
+    <button type="button" class="btn btn-danger" data-value="cancel">Cancel leave</button>
+  </div>
+</dialog>

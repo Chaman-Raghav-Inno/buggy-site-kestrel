@@ -1,0 +1,15 @@
+<p><a href="/payslips">← All payslips</a></p>
+<p id="loading" class="muted">Loading…</p>
+<article id="payslip" class="card payslip" hidden>
+  <header class="payslip-head">
+    <div><p class="eyebrow">Kestrel Works · Payslip</p><h1 id="p-month"></h1><p class="muted" id="p-who"></p></div>
+    <dl class="facts" id="p-meta"></dl>
+  </header>
+  <div class="table-wrap">
+    <table class="table" aria-label="Pay">
+      <thead><tr><th>Item</th><th class="num">Amount</th></tr></thead>
+      <tbody id="p-lines"></tbody>
+    </table>
+  </div>
+  <p class="actions"><a id="p-csv" class="btn btn-ghost btn-small">Download CSV</a> <button type="button" id="p-print" class="btn btn-ghost btn-small">Print</button></p>
+</article>

@@ -1,0 +1,50 @@
+<h1>Company policies</h1>
+<p class="muted">How Kestrel Works handles hours, leave, expenses and pay. All amounts are in euros.</p>
+<div class="grid-2">
+  <section class="card prose">
+    <h2>Timesheets</h2>
+    <ul>
+      <li>Weeks run Monday to Sunday. Enter hours per project for every day you worked, as decimals (7.5) or hours and minutes (7:30), in quarter-hour steps. A day can't have more than 24 hours.</li>
+      <li>The week's total includes every day, weekends too. A standard week is 40 hours; <strong>hours over 40 in a week</strong> are overtime. Long days don't count as overtime on their own.</li>
+      <li>Submitting a week sends it to your manager and locks it. If it's rejected, the manager's reason is shown on the week and you can fix it and submit again.</li>
+    </ul>
+    <h2>Leave</h2>
+    <ul>
+      <li>Everyone gets 25 days a year. Up to 5 unused days carry over from last year; anything beyond 5 is lost.</li>
+      <li>Leave is counted in working days: weekends and the public holidays below don't use any allowance. A half day uses 0.5.</li>
+      <li>You can't book more than your available balance, book days you've already requested, or pick an end date before the start.</li>
+      <li>Pending and approved requests come off your balance straight away. Cancelling upcoming leave gives the days back.</li>
+      <li>The team calendar shows approved and pending leave, every day of it, never rejected requests.</li>
+    </ul>
+    <h3>Public holidays</h3>
+    <ul>{{holidays}}</ul>
+  </section>
+  <section class="card prose">
+    <h2>Expenses</h2>
+    <ul>
+      <li>Claim within 90 days of the expense. Amounts in other currencies are converted to euros: {{rates}}.</li>
+      <li>Anything over €25 (after conversion) needs a receipt.</li>
+      <li>Meals are reimbursed up to €50 a claim.</li>
+      <li>Mileage pays €0.45 a km for your first 10,000 km in the calendar year, then €0.25 a km.</li>
+      <li>"Awaiting approval" on the expenses page is the total of your pending claims.</li>
+    </ul>
+    <h2>Pay</h2>
+    <ul>
+      <li>You're paid a twelfth of your salary on the 25th of each month. Your hourly rate is your salary ÷ 2,080.</li>
+      <li>Overtime is paid at <strong>1.5 ×</strong> your hourly rate.</li>
+      <li>Approved expenses are repaid with your salary. They aren't income, so they aren't taxed.</li>
+      <li>Income tax is 20% of taxable pay (salary and overtime). Pension is 5% of your monthly salary.</li>
+      <li>"Gross pay this year" on a payslip includes that month. Payslips are private: only you can see yours.</li>
+    </ul>
+    <h2>Approvals</h2>
+    <ul>
+      <li>Managers approve their team's timesheets, leave and expenses. Nobody approves their own requests: a manager's own claims go to their manager.</li>
+      <li>Rejecting anything needs a reason, which the employee sees.</li>
+    </ul>
+    <h2>People and profile</h2>
+    <ul>
+      <li>Search the directory by first or last name.</li>
+      <li>IBANs can be typed with or without spaces.</li>
+    </ul>
+  </section>
+</div>

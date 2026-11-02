@@ -1,0 +1,29 @@
+<h1>Your profile</h1>
+<p id="loading" class="muted">Loading…</p>
+<div id="profile" class="grid-2" hidden>
+  <section class="card">
+    <h2 id="pf-name"></h2>
+    <p class="muted" id="pf-role"></p>
+    <dl class="facts" id="pf-facts"></dl>
+  </section>
+  <div class="stack">
+    <form id="pf-form" class="card" novalidate>
+      <h2>Contact and bank details</h2>
+      <div class="field"><label for="pf-phone">Phone</label><input id="pf-phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="pf-iban">IBAN (salary is paid here)</label><input id="pf-iban" autocomplete="off" spellcheck="false"></div>
+      <p id="pf-msg" class="msg" role="status"></p>
+      <button type="submit" class="btn">Save details</button>
+    </form>
+    <form id="em-form" class="card" novalidate>
+      <h2>Emergency contact</h2>
+      <p id="em-view"></p>
+      <div id="em-edit" hidden>
+        <div class="field"><label for="em-name">Name</label><input id="em-name" maxlength="80"></div>
+        <div class="field"><label for="em-phone">Phone</label><input id="em-phone" type="tel" maxlength="40"></div>
+        <div class="actions"><button type="submit" class="btn">Save contact</button><button class="btn btn-ghost" id="em-cancel">Cancel</button></div>
+      </div>
+      <p id="em-msg" class="msg" role="status"></p>
+      <button type="button" id="em-open" class="btn btn-ghost">Change</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<h1>Approvals</h1>
+<p class="muted">Requests from your team. Select some and approve or reject them together.</p>
+<div class="tabs" role="tablist" aria-label="Request type">
+  <button type="button" role="tab" data-kind="" aria-selected="true">All</button>
+  <button type="button" role="tab" data-kind="timesheet" aria-selected="false">Timesheets</button>
+  <button type="button" role="tab" data-kind="leave" aria-selected="false">Leave</button>
+  <button type="button" role="tab" data-kind="expense" aria-selected="false">Expenses</button>
+</div>
+<div class="table-wrap">
+  <table class="table" aria-label="Requests waiting for you">
+    <thead><tr><th><label class="sr-only" for="ap-all">Select all</label><input type="checkbox" id="ap-all"></th><th>Person</th><th>Type</th><th>Request</th></tr></thead>
+    <tbody id="ap-rows"></tbody>
+  </table>
+</div>
+<div class="actions">
+  <button type="button" id="ap-approve" class="btn">Approve selected</button>
+  <button type="button" id="ap-reject" class="btn btn-ghost">Reject selected</button>
+  <span id="ap-count" class="muted"></span>
+</div>
+<p id="ap-msg" class="msg" role="status"></p>
+<dialog id="ap-dialog" aria-labelledby="ap-dialog-title">
+  <form id="ap-reason-form" method="dialog" novalidate>
+    <h2 id="ap-dialog-title">Reject the selected requests?</h2>
+    <div class="field"><label for="ap-reason">Reason (shown to the employee)</label><textarea id="ap-reason" rows="3" maxlength="300"></textarea></div>
+    <div class="dialog-actions">
+      <button type="button" class="btn btn-ghost" data-value="back">Back</button>
+      <button type="button" class="btn btn-danger" data-value="reject">Reject</button>
+    </div>
+  </form>
+</dialog>
